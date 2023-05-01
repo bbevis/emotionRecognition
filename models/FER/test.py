@@ -19,12 +19,15 @@ emotion_model = model_from_json(loaded_model_json)
 emotion_model.load_weights("./models/FER/emotion_model.h5")
 print("Loaded model from disk")
 
-# start the webcam feed
-cap = cv2.VideoCapture(0)
+# start the webcam feed (2 for mac default cam)
+# cap = cv2.VideoCapture(2)
 
 # pass here your video path
 # you may download one from here : https://www.pexels.com/video/three-girls-laughing-5273028/
 # cap = cv2.VideoCapture("./data/FER/validate/munich.mp4")
+
+cap = cv2.VideoCapture("./data/FER/validate/skydive.mp4")
+
 
 
 while True:
